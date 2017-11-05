@@ -1,0 +1,54 @@
+.full-width {
+  width: 100%;
+}
+
+.App {
+  box-sizing: border-box;
+}
+
+.App-header {
+  background-color: #222;
+  height: 46px;
+  padding: 5px 20px;
+  color: white;
+}
+
+.Login {
+  background: #111;
+  height: 100%;
+}
+
+.Login-wrapper {
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  padding: 0 40px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.Login-container {
+
+}
+
+.Login-container h1 {
+  margin-bottom: 50px;
+}
+
+.btnLoginFacebook {
+  background: linear-gradient(#4c69ba,#3b55a0);
+  border-color: #4c69ba;
+  border-radius: 2px;
+  color: #fff;
+  font-family: Helvetica neue;
+  font-size: 90%;
+  padding: 7px 10px;
+  text-shadow: 0 -1px 0 #354c8c;
+  -webkit-font-smoothing: antialiased;
+}
