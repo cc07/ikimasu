@@ -12,10 +12,19 @@ class Login extends Component {
     })
   }
 
-  onLoginClick = loginData => {
+  onLoginClick = () => {
+
+    const { dispatch, history } = this.props;
+
     return this.props.firebase.login({
       provider: 'facebook',
       type: 'popup'
+    }).then(userInfo => {
+      dispatch({
+        type: 'LOGIN::SUCCESS',
+        response: userInfo
+      })
+      history.push('/main');
     });
   }
 
@@ -34,9 +43,9 @@ class Login extends Component {
   }
 }
 
-const mapStateToProp = ({ firebase: { auth, profile } }) => ({
-  auth,
-  profile
+const mapStateToProp = ({ firebase }) => ({
+  auth: firebase.auth,
+  profile: firebase.profile
 })
 
 export default compose(
